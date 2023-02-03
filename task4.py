@@ -6,3 +6,9 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+
+from random import randint
+numbers = [randint(0, 101) for i in range(14)]
+print(f"Пример исходного списка: {numbers}")
+new_list = [el for el in numbers if numbers.count(el) == 1]
+print(f"Результат: {new_list}")
